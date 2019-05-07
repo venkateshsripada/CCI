@@ -1,1 +1,1 @@
-Solutions to Cracking the coding interview chapterwise
+Chapterwise solutions to Cracking the coding interview
