@@ -2,23 +2,33 @@
 
 # Question: Given two strings, write a method to check if permuatation of other
 
+# Optimal solution1:
 
-def permutation(string1, string2):
-	if len(string1) > len(string2):
-		max_string = string1
-		min_string = string2
-	else:
-		max_string = string2
-		min_string = string1
-
-
-	for char in min_string:
-		if char in max_string:
+def opt_permutation(string1, string2):
+	if len(string1) == len(string2):
+		string1 = string1.split()
+		string1 = string1.sort()
+		string2 = string2.split()
+		string2 = string2.sort()
+		if string1 == string2:
 			return True
 		else:
 			return False
+	else:
+		return False
 
-	
+
+# Solution 2:
+def permutation(string1, string2):
+	if len(string1) == len(string2):
+		for char in string1:
+			if char in string2:
+				return True
+			else:
+				return False
+	else:
+		return False	
+
 
 if __name__ == "__main__":
 	print ("Type first string")
