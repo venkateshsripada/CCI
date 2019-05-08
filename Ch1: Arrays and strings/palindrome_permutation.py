@@ -4,20 +4,20 @@
 
 
 def palindrome_per(string):
-	old_string = string.strip().replace(" ","")		# String without spaces
-	length = len(old_string)
+	new_string = string.strip().replace(" ","")		# String without spaces
+	length = len(new_string)
 	flag = 0
 
 	# Loop to check if it is palindrome
-	for char in old_string:
-		if old_string[length-1] == char:	 # Letter from end of string compared to its pair from the beginning
+	for char in new_string:
+		if new_string[length-1] == char:	 # Letter from end of string compared to its pair from the beginning
 			flag = flag + 1	
 		else:
 			pass
 		length -= 1		# Moving one letter back at a time
 
 	# Loop to check for permutation
-	if flag == len(old_string):
+	if flag == len(new_string):
 		return True
 	else:
 		return False
